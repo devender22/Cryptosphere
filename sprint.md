@@ -47,3 +47,13 @@
 - [ ] Write python code to fetch market data of Ethereum from poloniex, insert it in DB.
 - [ ] APIs to connect to SQL server
 - [ ] Create PR of work done
+
+## Week3 - 02/20 to 02/26
+
+#### UI development (Yashasweni & Paridhi)
+- [ ] Continue with previous week items
+- [ ] Integrate redux data store
+- [ ] Raise a PR
+
+#### Backend (Anushka, Abhirami & Tanya)
+- [ ] Continue with previous week items
