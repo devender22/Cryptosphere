@@ -1,5 +1,9 @@
 .App {
-  text-align: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .App-logo {
@@ -13,6 +17,30 @@
   }
 }
 
+.figma_heading{
+  text-align: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #25678F;
+  }
+  
+  table {
+    border: 2px solid rgba(217, 217, 217, 0.58);
+    border-radius: 17px;
+    width: 440px;
+    height: 180px;
+  }
+  
+  
+  th {
+    border-bottom: solid black;
+    font-size: larger;
+  }
+  
+  
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
