@@ -1,21 +1,14 @@
 .App {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  font-family: 'Roboto', sans-serif;
+  /* background-color: #25678F; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .figma_heading{
   text-align: center;
@@ -34,33 +27,33 @@
     height: 180px;
   }
   
-  
+  .Main{
+  font-family: 'Roboto', sans-serif;
+}  
   th {
     border-bottom: solid black;
     font-size: larger;
   }
-  
-  
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
+  .MuiOutlinedInput-notchedOutline {
+    border-color: #27C499 !important;
+  }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .suggestion-text{
+    font-size:13px;
+    text-decoration: none;
+    color: black;
   }
-  to {
-    transform: rotate(360deg);
+  .suggestions-menu{
+    border: 1px solid rgba(176, 174, 174, 0.96);
+    width: 175px;
+    /* border-top: 0px;
+    border-radius: 0px 0px 5px 5px;
+    border-color: #27C499 !important; */
+    padding: 1em;
+    border-radius: 5px;
   }
-}
+
+  .suggestion-box :hover{
+    color: #25678F;
+  }
