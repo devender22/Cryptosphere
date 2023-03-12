@@ -6,7 +6,7 @@ const app = express();
 const port = 5000;
 const eod_data_Router = require("./routes/eod_data");
 const intraday_prices_Router = require("./routes/intraday_prices");
-const other_metrics_Router = require("./routes/other_metrics");
+const other_securities_Router = require("./routes/other_securities");
 
 app.use(express.json());
 app.use(
@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 
 app.use("/eod-data", eod_data_Router);
 app.use("/intraday-prices", intraday_prices_Router);
-app.use("/other-metrics", other_metrics_Router);
+app.use("/other-securities", other_securities_Router);
 
 /* Error handler middleware */
 app.use((err, req, res, next) => {

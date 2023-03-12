@@ -85,4 +85,4 @@ Currently, the server runs on localhost:5000. This can be changed by specifying 
 ### Endpoints:
 - http://localhost:5000/eod-data : Gives details on the end of the day data.
 -  http://localhost:5000/intraday-prices : Gives prices and other details for the current day.
-- http://localhost:5000/other-metrics : Gives details on other metrics like SPX index, Gold price etc.
+- http://localhost:5000/other-securities : Gives details on other securities like SPX index, Gold price etc.
