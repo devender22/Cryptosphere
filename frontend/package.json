@@ -10,9 +10,12 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+<<<<<<< HEAD
     "bootstrap": "^5.2.3",
     "express": "^4.18.2",
     "mysql2": "^3.2.0",
+=======
+>>>>>>> parent of dda41f8 (connected db to node.js, endpoints added)
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
