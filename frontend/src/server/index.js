@@ -19,6 +19,11 @@ app.get("/", (req, res) => {
     res.json({ message: "ok" });
 });
 
+app.post("/post", (req, res) => {
+    console.log("Connected to React");
+    res.redirect("/");
+  });
+  
 app.use("/eod-data", eod_data_Router);
 app.use("/intraday-prices", intraday_prices_Router);
 app.use("/other-metrics", other_metrics_Router);
