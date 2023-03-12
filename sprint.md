@@ -92,3 +92,19 @@
 - [ ] Start node server which will connect to MySQL DB, add endpoints which will give historical data and T date data (express server - read about it)
 - [ ] Create PR
 - [ ] Newsletter - explore different websites, come up with DB table that we will use, think about how to remove duplicates (Abhirami and Paridhi)
+
+## Week6 - 03/12 to 03/18
+
+#### UI development (Yashasweni & Paridhi)
+- [ ] Merge reviewed code in master
+- [ ] Create 3 PRs for new code, Lega to review
+- [ ] Complete impl of Overview, Charts and News pages (Abhirami can help in Charts page impl)
+- [ ] Integrate with real backend data(changes would be needed in existing routes)
+
+#### Backend (Anushka, Abhirami & Tanya)
+- [ ] Create PR for existing code
+- [ ] Debug extra time taken in insert operation - could be related to replication
+- [ ] Anushka for Gold, USD and SPX index download and create PR
+- [ ] Research about other APIs which can give price for Gold, SPX Index (dump it in DB) - WIP
+- [ ] Newsletter - explore different websites, come up with DB table that we will use, think about how to remove duplicates (Tanya & Anushka)
+- [ ] Explore local linux cron and schedule download jobs for data downloads
