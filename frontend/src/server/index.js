@@ -8,6 +8,8 @@ const eod_data_Router = require("./routes/eod_data");
 const intraday_prices_Router = require("./routes/intraday_prices");
 const other_metrics_Router = require("./routes/other_metrics");
 
+var cors = require('cors');
+app.use(cors());
 app.use(express.json());
 app.use(
     express.urlencoded({
