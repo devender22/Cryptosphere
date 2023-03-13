@@ -1,7 +1,10 @@
 import React from 'react';
 import SearchBox from '../components/SearchBox';
 import axios from 'axios';
-
+import Navbar from '../components/Navbar';
+import Info from '../components/Info';
+import News from '../components/News';
+import BackToTopButton from '../components/BackToTopButton';
 function HomePage() {
 
   function getData(){
@@ -18,11 +21,11 @@ function HomePage() {
 
   return (
     <div class="Main">
-      <SearchBox />
-      <form action="/post" method="post" className="form">
-          <button type="submit">Connect</button>
-      </form>
-      <button onClick={getData} type="submit">Data</button>
+      <BackToTopButton />
+      <Navbar/>
+      <Info/>
+      <News/>
+      
     </div>
   );
 }

@@ -4,56 +4,99 @@
   display: flex;
   justify-content: center;
   align-items: center; */
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   /* background-color: #25678F; */
 }
 
-
-
-.figma_heading{
+.figma_heading {
   text-align: center;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
   line-height: 48px;
-  color: #25678F;
-  }
-  
-  table {
-    border: 2px solid rgba(217, 217, 217, 0.58);
-    border-radius: 17px;
-    width: 440px;
-    height: 180px;
-  }
-  
-  .Main{
-  font-family: 'Roboto', sans-serif;
-}  
-  th {
-    border-bottom: solid black;
-    font-size: larger;
-  }
+  color: #25678f;
+}
 
-  .MuiOutlinedInput-notchedOutline {
-    border-color: #27C499 !important;
-  }
+table {
+  border: 2px solid rgba(217, 217, 217, 0.58);
+  border-radius: 17px;
+  width: 440px;
+  height: 180px;
+}
 
-  .suggestion-text{
-    font-size:13px;
-    text-decoration: none;
-    color: black;
-  }
-  .suggestions-menu{
-    border: 1px solid rgba(176, 174, 174, 0.96);
-    width: 175px;
-    /* border-top: 0px;
+.Main {
+  font-family: "Roboto", sans-serif;
+}
+th {
+  border-bottom: solid black;
+  font-size: larger;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: #27c499 !important;
+}
+
+.suggestion-text {
+  font-size: 13px;
+  text-decoration: none;
+  color: black;
+}
+.suggestions-menu {
+  border: 1px solid rgba(176, 174, 174, 0.96);
+  width: 175px;
+  /* border-top: 0px;
     border-radius: 0px 0px 5px 5px;
     border-color: #27C499 !important; */
-    padding: 1em;
-    border-radius: 5px;
-  }
+  padding: 1em;
+  border-radius: 5px;
+  z-index: 100;
+  position: absolute;
+}
 
-  .suggestion-box :hover{
-    color: #25678F;
-  }
+.suggestion-box :hover {
+  color: #25678f;
+}
+
+.Main {
+  margin: 30px;
+}
+
+.nav-opt {
+  margin-left: 40px !important;
+}
+
+.nav-opt:hover {
+  color: #27c499 !important;
+}
+
+.nav-opt:active,
+.nav-opt:focus,
+.nav-opt:target {
+  color: #27c499 !important;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .show > .nav-link {
+  color: #27c499 !important;
+}
+
+.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  font-size: 16px;
+  background-color: #27c499;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+.back-to-top.show {
+  display: block;
+}
