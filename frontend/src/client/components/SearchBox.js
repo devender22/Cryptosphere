@@ -17,7 +17,7 @@ function SearchBox() {
   const suggestions = useSelector((state) => state.search.suggestions);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [selectedItem, setSelectedItem] = useState("");
+
 
   const handleInputChange = (event) => {
     const value = event.target.value;
