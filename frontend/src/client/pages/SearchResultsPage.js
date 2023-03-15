@@ -4,8 +4,8 @@ function SearchResultsPage() {
   const { query } = useParams();
   console.log(query)
   return (
-    <div>
-      <h1>Search Results for: {query}</h1>
+    <div style={{"margin":"40px"}}>
+      <h3>Search Results for: {query}</h3>
     </div>
   );
 }

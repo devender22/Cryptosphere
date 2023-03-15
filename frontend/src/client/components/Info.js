@@ -13,3 +13,6 @@ Ethereum was conceived in 2013 by programmer Vitalik Buterin. Ethereum allows an
 }
 
 export default Info;
+
+
+
