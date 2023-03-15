@@ -25,7 +25,6 @@ function HomePage() {
       <Navbar/>
       <Overview/>
       <News/>
-      
     </div>
   );
 }

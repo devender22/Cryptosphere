@@ -10,6 +10,7 @@ function GraphOverview() {
           Ethereum
         </Badge>
       </div>
+      
     </div>
   );
 }
