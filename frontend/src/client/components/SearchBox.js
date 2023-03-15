@@ -8,7 +8,7 @@ import {
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import TextField from "@mui/material/TextField";
-import { alpha, styled } from "@mui/material/styles";
+// import { alpha, styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 
 function SearchBox() {
@@ -17,7 +17,6 @@ function SearchBox() {
   const suggestions = useSelector((state) => state.search.suggestions);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
 
   const handleInputChange = (event) => {
     const value = event.target.value;
@@ -44,9 +43,9 @@ function SearchBox() {
           suggestion.toLowerCase() === event.target.value.toLowerCase()
       );
       if (selectedSuggestion) {
-        let lowerCaseSentence = selectedSuggestion
-          .toLowerCase()
-          .replace(/\s+/g, "-");
+        // let lowerCaseSentence = selectedSuggestion
+        //   .toLowerCase()
+        //   .replace(/\s+/g, "-");
         navigate(`/search/${selectedSuggestion}`);
       }
     }
@@ -57,7 +56,7 @@ function SearchBox() {
       return (
         <div className="suggestions-menu">
           {suggestions.map((suggestion) => (
-            <Box sx={{ p: 0.5,  }} className="suggestion-box">
+            <Box sx={{ p: 0.5,  }} className="suggestion-box" key={suggestion}>
               <Link to={`/search/${suggestion}`} className="suggestion-text">
                 {suggestion}
               </Link>

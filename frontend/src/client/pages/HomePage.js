@@ -1,5 +1,4 @@
 import React from 'react';
-import SearchBox from '../components/SearchBox';
 import axios from 'axios';
 import Navbar from '../components/Navbar';
 import Info from '../components/Info';
