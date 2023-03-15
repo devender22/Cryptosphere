@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Info from '../components/Info';
 import News from '../components/News';
 import BackToTopButton from '../components/BackToTopButton';
+import Overview from '../components/Overview';
 function HomePage() {
 
   function getData(){
@@ -22,7 +23,7 @@ function HomePage() {
     <div class="Main">
       <BackToTopButton />
       <Navbar/>
-      <Info/>
+      <Overview/>
       <News/>
       
     </div>
