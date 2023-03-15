@@ -4,7 +4,7 @@ function About() {
   return (
     <div className="overview-box" style={{ height: "300px" }}>
       <div className="box-heading">About</div>
-      <p style={{ padding: "20px" }}>
+      <p style={{ padding: "20px", fontSize: "15px" }}>
         {" "}
         Ethereum is a decentralized, open-source blockchain with smart contract
         functionality. Ether is the native cryptocurrency of the platform. Among
@@ -17,11 +17,10 @@ function About() {
         like brokerages, exchanges, or banks, such as allowing cryptocurrency
         users to borrow against their holdings or lend them out for interest.
         Ethereum also allows users to create and exchange NFTs, which are unique
-        tokens
-        <a href="https://en.wikipedia.org/wiki/Ethereum" target="_blank">
-          {" "}
-          <br></br>
-          more...{" "}
+        tokens representing ownership of an associated asset or privilege, as
+        recognized by any number of institutions.
+        <a href="https://en.wikipedia.org/wiki/Ethereum" target="_blank" style={{"textDecoration":"none"}}>
+          {" "}more{" "}
         </a>{" "}
       </p>
     </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Navbar from '../components/Navbar';
 import Info from '../components/Info';
-import News from '../components/News';
+import News from '../components/News/News';
 import BackToTopButton from '../components/BackToTopButton';
 import Overview from '../components/Overview';
 function HomePage() {
@@ -24,6 +24,7 @@ function HomePage() {
       <BackToTopButton />
       <Navbar/>
       <Overview/>
+      <hr></hr>
       <News/>
     </div>
   );
