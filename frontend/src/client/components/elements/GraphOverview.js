@@ -9,6 +9,7 @@ function GraphOverview() {
         <Badge pill bg="success" style={{"margin-left":"20px"}}>
           Ethereum
         </Badge>
+        
       </div>
     </div>
   );
