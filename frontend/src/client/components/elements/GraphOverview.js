@@ -10,6 +10,8 @@ function GraphOverview() {
           Ethereum
         </Badge> */}
         <button className="btn-badge">Ethereum</button>
+        {/* </Badge> */}
+        
       </div>
       
     </div>

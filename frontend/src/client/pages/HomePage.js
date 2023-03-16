@@ -5,6 +5,8 @@ import Info from '../components/Info';
 import News from '../components/News/News';
 import BackToTopButton from '../components/BackToTopButton';
 import Overview from '../components/Overview';
+import EOD from '../components/elements/Charts';
+import Charts from '../components/elements/Charts';
 function HomePage() {
 
   function getData(){
@@ -26,6 +28,8 @@ function HomePage() {
       <Overview/>
       <hr></hr>
       <News/>
+      <Charts/>
+      
     </div>
   );
 }
