@@ -12,6 +12,7 @@ function Overview(){
     return(
         <div id="action1">
             <Container>
+            <h3 className="section-heading" style={{"marginBottom":"60px"}}>Overview</h3>
                 <Row>
                     <Col sm={5}> <Stack gap={2} >
                     <Col ><PriceStatistics></PriceStatistics></Col>
