@@ -141,7 +141,7 @@ th {
 
 .section-heading{
   color:#27c499;
-  text-decoration: none; border-bottom:2px solid #25678f;
+  text-decoration: none; border-bottom:3px solid #25678f;
   text-align: center;
   width:10%;
   margin:auto;
@@ -149,4 +149,64 @@ th {
 
 .tile-group{
   padding:80px;
+}
+
+.btn-badge {
+  background: #27c499;
+  background-image: -webkit-linear-gradient(top, #27c499, #27c499);
+  background-image: -moz-linear-gradient(top, #27c499, #27c499);
+  background-image: -ms-linear-gradient(top, #27c499, #27c499);
+  background-image: -o-linear-gradient(top, #27c499, #27c499);
+  background-image: linear-gradient(to bottom, #27c499, #27c499);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px !important;
+  font-family: Arial;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  padding: 3px 10px 3px 10px !important;
+  text-decoration: none;
+  margin-left:20px;
+  border:0px solid #27c499;
+}
+
+.btn-badge:hover {
+  text-decoration: none;
+}
+
+.fill {
+  height: 10.5vw; /*Set any dimensions you like*/
+  width: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fill img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  /* position: absolute; */
+  /* margin-left: 100%; */
+}
+
+.tile-content{
+  position: relative;
+  height: 100%;
+}
+
+.source{
+  position: absolute;
+  bottom: 0 !important;
+  right: 0 !important;
+  color:#27c499;
+  font-weight: 600;
+}
+
+.tile-des{
+  color:#b3b3b3;
+}
+
+.dt{
+  color:#25678f;
+  margin-left:10px;
 }
