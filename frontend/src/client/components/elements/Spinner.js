@@ -1,4 +1,4 @@
-import 'D:/desis/project/node4/github_stuff/Cryptosphere/frontend/src/css/Spinner.css'
+import '../../../css/Spinner.css';
 
 const Spinner = () => {
     return (
