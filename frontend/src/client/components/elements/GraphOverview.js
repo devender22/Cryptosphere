@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Badge from "react-bootstrap/Badge";
 import Highcharts from 'highcharts';
-import ChartPlot from "../Charts";
-import EODChartPlot from "../Charts/EODChartplot";
+import EODChartPlot from "../Charts/EODPriceChartPlot";
 
 function GraphOverview() {
   const [options, setOptions] = useState(null);
@@ -39,9 +37,9 @@ function GraphOverview() {
       const seriesData = [];
       const candleStickData = [];
       responseData.data.map((item) => {
-      categories.push(Date(item.Date));
-      seriesData.push(parseFloat(item.Open));
-      candleStickData.push([new Date(item.Date).getTime(), item.Open, item.Close, item.High, item.Low])
+        categories.push(Date(item.Date));
+        seriesData.push(parseFloat(item.Close));
+        candleStickData.push([new Date(item.Date).getTime(), item.Open, item.Close, item.High, item.Low])
       });
 
       setChartData(candleStickData)
@@ -116,7 +114,7 @@ function GraphOverview() {
     }
 
     fetchRecords();
-  
+
 
   }, []);
 
@@ -124,13 +122,13 @@ function GraphOverview() {
     <div className="overview-box" style={{ height: "500px" }}>
       <div className="box-heading">
         Chart
-   
+
         <button className="btn-badge">Ethereum</button>
-                 
+
         <button className="btn-badge" onClick={() => setType("candlestick")}>Candlestick chart</button>
 
-        <button className="btn-badge" onClick={() => setType("ohlc")}>OHLC</button> 
-      
+        <button className="btn-badge" onClick={() => setType("ohlc")}>OHLC</button>
+
       </div>
       {chartData.length > 0 ?
         <EODChartPlot data={chartData} chartType={type} /> : <>LOADING...</>

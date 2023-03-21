@@ -21,7 +21,7 @@ const chartOptions = {
     }]
 }
 
-class EODChartPlot extends React.Component {
+class IntradayPriceTSChartPlot extends React.Component {
     constructor(props) {
         super(props)
 
@@ -45,7 +45,7 @@ class EODChartPlot extends React.Component {
                     data: this.props.data,
                     type: this.props.chartType,
                    
-                    type: 'candlestick',//toggle between candlestick and line
+                    type: 'area',
                     name: 'Price',
                     id: 'price'
                 }, {
@@ -92,7 +92,7 @@ class EODChartPlot extends React.Component {
             <Row>
                 <Col xs={12}>
                     <div className="overview-box" style={{ height: "300px" }}>
-                    <div className="box-heading">Historical Prices</div>
+                    <div className="box-heading">Intraday Price Chart - Time series</div>
                         
                         <Row>
                             <Col s={12}>
@@ -106,4 +106,4 @@ class EODChartPlot extends React.Component {
     }
 }
 
-export default EODChartPlot
+export default IntradayPriceTSChartPlot

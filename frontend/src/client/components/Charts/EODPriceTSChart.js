@@ -1,14 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Highcharts from 'highcharts';
-import HighchartsReact from 'highcharts-react-official';
-import HighchartsMore from 'highcharts/highcharts-more';
-import HC_exporting from 'highcharts/modules/exporting';
-import transformData from "../../utils/transformdata";
-import StockChart from "./StockChart";
-import ChartPlot from ".";
-import EODChartPlot from "./EODChartplot";
+import EODPriceTSChartPlot from "./EODPriceTSChartPlot";
 
 require('highcharts/indicators/indicators')(Highcharts)
 require('highcharts/indicators/pivot-points')(Highcharts)
@@ -17,7 +9,7 @@ require('highcharts/modules/exporting')(Highcharts)
 require('highcharts/modules/map')(Highcharts)
 
 
-function EODChart() {
+function EODPriceTSChart() {
     const [options, setOptions] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [chartData, setChartData] = useState([]);
@@ -49,24 +41,24 @@ function EODChart() {
 
             const categories = [];
             const seriesData = [];
-            const candleStickData = [];
+            const timeSeriesData = [];
             responseData.data.map((item) => {
                 categories.push(Date(item.Date));
                 seriesData.push(parseFloat(item.Close));
-                candleStickData.push([new Date(item.Date).getTime(), item.Open, item.High, item.Low, item.Close])
+                timeSeriesData.push([new Date(item.Date).getTime(), item.Close])
             });
-            
-            setChartData(candleStickData)
+
+            setChartData(timeSeriesData)
             setOptions({
                 title: {
-                    text: `Candlestick Data`
+                    text: `Timeseries Data`
                 },
                 xAxis: {
                     categories: categories
                 },
                 yAxis: {
                     title: {
-                        text: "ETH Price ($)"
+                        text: "ETH Price"
                     }
                 },
                 tooltip: {
@@ -103,20 +95,20 @@ function EODChart() {
                     }
                 },
 
-                 plotOptions: {
-                    
-                     line: {
-                         dataLabels: {
-                             enabled: false
-                         },
-                     }
-                 },
+                plotOptions: {
+
+                    line: {
+                        dataLabels: {
+                            enabled: false
+                        },
+                    }
+                },
                 series: [
                     {
-                        type: "candlestick",
-                        name: 'Candle Stick',
+                        type: "line",
+                        name: 'Time Series',
                         color: "#7393B3",
-                        data: candleStickData,
+                        data: timeSeriesData,
                         zIndex: 1,
 
                     }
@@ -133,35 +125,12 @@ function EODChart() {
 
     return (
         <>
-            {/* <Row>
-            <Col xs={12}>
-                <div>
-                    <h1>Charts</h1>
-                    <Row>
-                        <Col s={12}>
-                            {isLoading &&
-                                <div>Loading data...</div>
-                            }
-                            {!isLoading && options &&
-                                // <HighchartsReact
-                                //     highcharts={Highcharts}
-                                //     options={options}
-                                // />
-                                <>
-                                    I am here
-                                    <StockChart options={stockOptions} highcharts={Highcharts} />
-                                </>
-                            }
-                        </Col>
-                    </Row>
-                </div>
-            </Col>
-        </Row> */}
+            { }
             {chartData.length > 0 ?
-                <EODChartPlot data={chartData} /> : <>LOADING...</>
+                <EODPriceTSChartPlot data={chartData} /> : <>LOADING...</>
             }
         </>
     );
 }
 
-export default EODChart;
+export default EODPriceTSChart;

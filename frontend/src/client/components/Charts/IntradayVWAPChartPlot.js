@@ -21,7 +21,7 @@ const chartOptions = {
     }]
 }
 
-class IntradayChartPlot extends React.Component {
+class IntradayVWAPChartPlot extends React.Component {
     constructor(props) {
         super(props)
 
@@ -45,8 +45,8 @@ class IntradayChartPlot extends React.Component {
                     data: this.props.data,
                     type: this.props.chartType,
                    
-                    type: 'candlestick',//toggle between candlestick and line
-                    name: 'Price',
+                    type: 'area',
+                    name: 'VWAP Price',
                     id: 'price'
                 }, {
                     type: 'pivotpoints',
@@ -92,7 +92,7 @@ class IntradayChartPlot extends React.Component {
             <Row>
                 <Col xs={12}>
                     <div className="overview-box" style={{ height: "300px" }}>
-                    <div className="box-heading">Intraday Prices</div>
+                    <div className="box-heading">Intraday VWAP Chart</div>
                         
                         <Row>
                             <Col s={12}>
@@ -106,4 +106,4 @@ class IntradayChartPlot extends React.Component {
     }
 }
 
-export default IntradayChartPlot
+export default IntradayVWAPChartPlot

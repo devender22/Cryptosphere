@@ -1,14 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Highcharts from 'highcharts';
-import HighchartsReact from 'highcharts-react-official';
-import HighchartsMore from 'highcharts/highcharts-more';
-import HC_exporting from 'highcharts/modules/exporting';
-import transformData from "../../utils/transformdata";
-import StockChart from "./StockChart";
-import ChartPlot from ".";
-import IntradayChartPlot from "./IntradayChartplot";
+import EODVWAPChartPlot from "./EODVWAPChartPlot";
 
 require('highcharts/indicators/indicators')(Highcharts)
 require('highcharts/indicators/pivot-points')(Highcharts)
@@ -17,15 +9,25 @@ require('highcharts/modules/exporting')(Highcharts)
 require('highcharts/modules/map')(Highcharts)
 
 
-function IntradayChart() {
+function EODVWAPChart() {
     const [options, setOptions] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [chartData, setChartData] = useState([]);
-    const url = "http://localhost:5000/intraday-prices";
+    const url = "http://localhost:5000/eod-data";
 
     useEffect(() => {
         setIsLoading(true);
-        const fetchRecords = async () => {           
+        const fetchRecords = async () => {
+            const query = {
+                elems: [
+                    {
+                        interval: "mly",
+                        duration: 1,
+                        name: "avgt",
+                        reduce: { "reduce": "mean" },
+                        prec: 3
+                    }]
+            }
             let response, responseData
             try {
                 response = await fetch(url);
@@ -39,25 +41,24 @@ function IntradayChart() {
 
             const categories = [];
             const seriesData = [];
-            const candleStickData = [];
+            const timeSeriesData = [];
             responseData.data.map((item) => {
-                categories.push(Date(item.DateTime));
-                seriesData.push(parseFloat(item.Close));
-                candleStickData.push([new Date(item.DateTime).getTime(), item.Open, item.High, item.Low, item.Close])
+                categories.push(Date(item.Date));
+                seriesData.push(parseFloat(item.VWAP));
+                timeSeriesData.push([new Date(item.Date).getTime(), item.VWAP])
             });
 
-            setChartData(candleStickData)
-
+            setChartData(timeSeriesData)
             setOptions({
                 title: {
-                    text: `Candlestick Data`
+                    text: `Timeseries Data`
                 },
                 xAxis: {
                     categories: categories
                 },
                 yAxis: {
                     title: {
-                        text: "Price ($)"
+                        text: "ETH VWAP ($)"
                     }
                 },
                 tooltip: {
@@ -94,20 +95,20 @@ function IntradayChart() {
                     }
                 },
 
-                 plotOptions: {
-                    
-                     line: {
-                         dataLabels: {
-                             enabled: false
-                         },
-                     }
-                 },
+                plotOptions: {
+
+                    line: {
+                        dataLabels: {
+                            enabled: false
+                        },
+                    }
+                },
                 series: [
                     {
-                        type: "candlestick",
-                        name: 'Candle Stick',
+                        type: "line",
+                        name: 'Time Series',
                         color: "#7393B3",
-                        data: candleStickData,
+                        data: timeSeriesData,
                         zIndex: 1,
 
                     }
@@ -124,14 +125,12 @@ function IntradayChart() {
 
     return (
         <>
-        {}
+            { }
             {chartData.length > 0 ?
-
-                <IntradayChartPlot
-                    data={chartData} /> : <>LOADING...</>
+                <EODVWAPChartPlot data={chartData} /> : <>LOADING...</>
             }
         </>
     );
 }
 
-export default IntradayChart;
+export default EODVWAPChart;
