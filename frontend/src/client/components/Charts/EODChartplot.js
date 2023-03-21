@@ -89,19 +89,19 @@ class EODChartPlot extends React.Component {
 
     render() {
         return <div>
-            <Row>
+            {/* <Row>
                 <Col xs={12}>
                     <div className="overview-box" style={{ height: "300px" }}>
                     <div className="box-heading">Historical Prices</div>
                         
                         <Row>
-                            <Col s={12}>
+                            <Col s={12}> */}
                                 <StockChart options={this.state.chartOptions} highcharts={Highcharts} />    
-                            </Col>
+                            {/* </Col>
                         </Row>
                     </div>
                 </Col>
-            </Row>
+            </Row> */}
         </div>
     }
 }

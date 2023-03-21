@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Badge from "react-bootstrap/Badge";
 import Highcharts from 'highcharts';
-import ChartPlot from "../Charts";
+// import ChartPlot from "../Charts";
 import EODChartPlot from "../Charts/EODChartplot";
 
 function GraphOverview() {
@@ -121,7 +121,7 @@ function GraphOverview() {
   }, []);
 
   return (
-    <div className="overview-box" style={{ height: "500px" }}>
+    <div className="overview-box" style={{ height: "450px" }}>
       <div className="box-heading">
         Chart
    

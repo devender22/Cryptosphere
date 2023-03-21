@@ -8,6 +8,8 @@ import Overview from '../components/Overview';
 import EODChart from '../components/Charts/Eod_graph';
 import IntradayChart from '../components/Charts/intraday_graph';
 import EODChartplot from '../components/Charts/IntradayChartplot';
+import ChartSection from '../components/Charts/ChartSection';
+import Events from '../components/Events/Events';
 function HomePage() {
 
   function getData() {
@@ -28,9 +30,13 @@ function HomePage() {
       <Navbar />
       <Overview />
       <hr></hr>
+      <ChartSection/>
+      <hr></hr>
+      {/* <Events></Events> */}
+      {/* <hr></hr> */}
       <News />
-      <EODChart />
-      <IntradayChart />
+     {/*  <EODChart /> */}
+      
 
     </div>
   );

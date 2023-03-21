@@ -7,7 +7,7 @@ import HighchartsMore from 'highcharts/highcharts-more';
 import HC_exporting from 'highcharts/modules/exporting';
 import transformData from "../../utils/transformdata";
 import StockChart from "./StockChart";
-import ChartPlot from ".";
+// import ChartPlot from ".";
 import EODChartPlot from "./EODChartplot";
 
 require('highcharts/indicators/indicators')(Highcharts)

@@ -88,10 +88,11 @@ class IntradayChartPlot extends React.Component {
     }
 
     render() {
+        
         return <div>
             <Row>
                 <Col xs={12}>
-                    <div className="overview-box" style={{ height: "300px" }}>
+                    <div className="overview-box" style={{ height: "400px", "overflow-y":"scroll" }}>
                     <div className="box-heading">Intraday Prices</div>
                         
                         <Row>

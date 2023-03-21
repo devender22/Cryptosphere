@@ -5,9 +5,12 @@ import "./styles.css";
 function Events() {
   return (
     <div id="action4"> 
-    <div className="main">
-      <h1 className="heading">Ethereum Timelines</h1>
-      <div className="container">
+    <div className="main-class">
+    <h3 className="section-heading" style={{ width: "6%" }}>
+        Events
+      </h3>
+      <div className="tile-group">
+      <div className="container-class">
         <ul>
           <li>
             <div className="circle"></div>
@@ -147,6 +150,8 @@ function Events() {
 
         </ul>
       </div>
+      </div>
+      
     </div>
     </div>
   );
