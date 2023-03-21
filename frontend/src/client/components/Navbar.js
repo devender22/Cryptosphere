@@ -6,6 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import SearchBox from './SearchBox';
 
+
 function NavScrollExample() {
   return (
     <Navbar bg="light" expand="lg">
