@@ -5,31 +5,33 @@ import Info from '../components/Info';
 import News from '../components/News/News';
 import BackToTopButton from '../components/BackToTopButton';
 import Overview from '../components/Overview';
-import EOD from '../components/elements/Charts';
-import Charts from '../components/elements/Charts';
+import EODChart from '../components/Charts/Eod_graph';
+import IntradayChart from '../components/Charts/intraday_graph';
+import EODChartplot from '../components/Charts/IntradayChartplot';
 function HomePage() {
 
-  function getData(){
-    var url='http://localhost:5000/eod-data'
+  function getData() {
+    var url = 'http://localhost:5000/eod-data'
     axios.get(url)
-    .then(response => {
-      console.log(response.data);
-    })
-    .catch(error => {
-      console.log(error);
-    });
+      .then(response => {
+        console.log(response.data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 
 
   return (
     <div class="Main">
       <BackToTopButton />
-      <Navbar/>
-      <Overview/>
+      <Navbar />
+      <Overview />
       <hr></hr>
-      <News/>
-      <Charts/>
-      
+      <News />
+      <EODChart />
+      <IntradayChart />
+
     </div>
   );
 }

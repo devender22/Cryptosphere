@@ -23,6 +23,7 @@ function About() {
           {" "}more{" "}
         </a>{" "}
       </p>
+
     </div>
   );
 }
