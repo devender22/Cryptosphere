@@ -36,16 +36,14 @@ function HomePage() {
       <Navbar />
       <Overview />
       <hr></hr>
+      <ChartSection/>
+      <hr></hr>
+      {/* <Events></Events> */}
+      {/* <hr></hr> */}
       <News />
-      <EODPriceChart />
-      <EODPriceTSChart />
-      <IntradayPriceChart />
-      <IntradayPriceTSChart />
-      <EODVWAPChart />
-      <IntradayVWAPChart />
-      <EODVolumeChart />
-      <IntradayVolumeChart />
-      <MktCapChart />
+      <EODChart />
+      <IntradayChart />
+
     </div>
   );
 }

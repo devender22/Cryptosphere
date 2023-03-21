@@ -109,7 +109,9 @@ th {
   -webkit-border-radius: 10px 10px 10px 10px;
   /* border: 1px solid #b3b3b3; */
   margin-bottom: 20px;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
+  overflow-x: hidden !important;
+  /* position: relative; */
 }
 
 #action1{
@@ -125,6 +127,9 @@ th {
   padding-left: 20px;
   color: #25678f;
   font-size: 15px;
+  position: sticky !important;
+  top:0px;
+  z-index: 999;
 }
 
 .line{

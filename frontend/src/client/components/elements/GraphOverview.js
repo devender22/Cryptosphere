@@ -119,7 +119,7 @@ function GraphOverview() {
   }, []);
 
   return (
-    <div className="overview-box" style={{ height: "500px" }}>
+    <div className="overview-box" style={{ height: "450px" }}>
       <div className="box-heading">
         Chart
 
