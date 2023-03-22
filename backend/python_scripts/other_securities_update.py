@@ -1,4 +1,4 @@
-from cryptosphere import db_util as db
+from crypto import db_util as db
 import requests
 from datetime import datetime
 from datetime import timedelta
@@ -6,7 +6,6 @@ from datetime import timedelta
 
 # Update table eod_data
 def update(start_date):
-
     sd_gold = str(datetime.strptime(start_date, '%Y-%m-%d')-timedelta(days=1))
     # Twelvedata API endpoint for gold
     url_1 = ('https://api.twelvedata.com/time_series?symbol=XAU/USD&'
@@ -15,35 +14,43 @@ def update(start_date):
     # Twelvedata API endpoint for SPX Index
     url_2 = ('https://api.twelvedata.com/time_series?symbol=SPX&'
              'interval=1day&timezone=UTC&start_date=%s&order=ASC&'
-             'apikey=2365947efa8348889a29ae366d2c4bd2') % (str(start_date))
-
+             'apikey=2365947efa8348889a29ae366d2c4bd2') % (start_date)
+    # Coinmetrics API endpoint for BTC
+    url_3 = ('https://community-api.coinmetrics.io/v4/timeseries/market-candle'
+             's?start_time=%s&paging_from=start&markets=coinbase-btc-usd-spot&'
+             'frequency=1d&page_size=10000') % (start_date)
     # Fetch data from above URLs
     gold_data = requests.get(url_1).json()
     spx_index_data = requests.get(url_2).json()
-    idx1 = 0
-    idx2 = 0
-    while (idx1 < len(gold_data['values']) and
-           idx2 < len(spx_index_data['values'])):
-        date = gold_data['values'][idx1]['datetime']
-        # If data is not available for SPX_Index, insert previous price
-        if date != spx_index_data['values'][idx2]['datetime']:
-            sql = ("INSERT INTO other_securities (Date, Gold, SPX_Index)"
+    btc_data = requests.get(url_3).json()
+    idx_1 = 0
+    idx_2 = 0
+    idx_3 = 0
+    while (idx_3 < len(btc_data['data'])):
+        date = btc_data['data'][idx_3]['time'][0: 10]
+        if date != gold_data['values'][idx_1]['datetime']:
+            sql = ("INSERT INTO other_securities (Date, BTC)"
+                   "VALUES (%s,%s);")
+            val = (date, btc_data['data'][idx_3]['price_close'])
+            idx_3 += 1
+        elif date != spx_index_data['values'][idx_2]['datetime']:
+            sql = ("INSERT INTO other_securities (Date, Gold, BTC)"
                    "VALUES (%s,%s,%s);")
-            db.cursor_object.execute("SELECT SPX_Index FROM other_securities"
-                                     " ORDER BY Date DESC LIMIT 1")
-            res = db.cursor_object.fetchall()
             val = (date,
-                   gold_data['values'][idx1]['close'],
-                   res[0][0])
-            idx1 += 1
+                   gold_data['values'][idx_1]['close'],
+                   btc_data['data'][idx_3]['price_close'])
+            idx_1 += 1
+            idx_3 += 1
         else:
-            sql = ("INSERT INTO other_securities (Date, Gold, SPX_Index)"
-                   "VALUES (%s,%s,%s);")
+            sql = ("INSERT INTO other_securities (Date, Gold, SPX_Index, BTC)"
+                   "VALUES (%s,%s,%s,%s);")
             val = (date,
-                   gold_data['values'][idx1]['close'],
-                   spx_index_data['values'][idx2]['close'])
-            idx1 += 1
-            idx2 += 1
+                   gold_data['values'][idx_1]['close'],
+                   spx_index_data['values'][idx_2]['close'],
+                   btc_data['data'][idx_3]['price_close'])
+            idx_1 += 1
+            idx_2 += 1
+            idx_3 += 1
         db.cursor_object.execute(sql, val)
         db.data_base.commit()
 
