@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Highcharts from 'highcharts';
 import EODChartPlot from "../Charts/EODPriceChartPlot";
+import OverviewChart from "./OverviewChart";
 
 function GraphOverview() {
   const [options, setOptions] = useState(null);
@@ -100,7 +101,8 @@ function GraphOverview() {
         series: [
           {
             // type: "candlestick",
-            name: 'Candle Stick',
+            type: 'line',//toggle between candlestick and line
+            name: 'Time Series',
             color: "#7393B3",
             data: candleStickData,
             zIndex: 1,
@@ -131,7 +133,7 @@ function GraphOverview() {
 
       </div>
       {chartData.length > 0 ?
-        <EODChartPlot data={chartData} chartType={type} /> : <>LOADING...</>
+        <OverviewChart data={chartData} chartType={type} /> : <>LOADING...</>
       }
     </div>
   );

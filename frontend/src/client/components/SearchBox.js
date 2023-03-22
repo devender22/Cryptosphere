@@ -46,7 +46,7 @@ function SearchBox() {
         // let lowerCaseSentence = selectedSuggestion
         //   .toLowerCase()
         //   .replace(/\s+/g, "-");
-        navigate(`/search/${selectedSuggestion}`);
+        navigate(`/${selectedSuggestion}`);
       }
     }
   };
@@ -57,7 +57,7 @@ function SearchBox() {
         <div className="suggestions-menu">
           {suggestions.map((suggestion) => (
             <Box sx={{ p: 0.5,  }} className="suggestion-box" key={suggestion}>
-              <Link to={`/search/${suggestion}`} className="suggestion-text">
+              <Link to={`/${suggestion}`} className="suggestion-text">
                 {suggestion}
               </Link>
             </Box>

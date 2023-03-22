@@ -6,7 +6,7 @@ export default function Statistic(){
     let valueStyle={"textAlign":"center","fontSize":"17px","color":"#27c499","fontWeight":"400"};
     return(
         <div>
-        <Row style={{"marginTop":"20px"}}>
+        <Row style={{"marginTop":"30px"}}>
             <Col sm={6} style={valueStyle}>24h Low / 24h High</Col>
             <Col sm={6} style={valueStyle}>0.04581</Col>
         </Row>

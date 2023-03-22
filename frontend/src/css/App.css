@@ -53,6 +53,7 @@ th {
   /* z-index: 100; */
   position: absolute;
   background-color: white;
+  z-index:4500;
 }
 
 .suggestion-box :hover {

@@ -7,10 +7,13 @@ import PriceStatistics from './elements/PriceStatistics';
 import Stack from 'react-bootstrap/Stack';
 import ROI from './elements/ROI';
 import GraphOverview from './elements/GraphOverview';
+import BackToTopButton from './BackToTopButton';
+import Navbar from './Navbar';
 
 function Overview(){
     return(
-        <div id="action1">
+        <div id="action1" className="Main">
+            <Navbar/>
             <Container>
             <h3 className="section-heading" style={{"marginBottom":"60px"}}>Overview</h3>
                 <Row>
@@ -29,8 +32,7 @@ function Overview(){
                     </Stack> */}
                 </Row>
             </Container>
-            
-
+            <BackToTopButton/>
         </div>
     );
 }

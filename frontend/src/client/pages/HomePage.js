@@ -15,6 +15,7 @@ import IntradayVWAPChart from '../components/Charts/IntradayVWAPChart';
 import IntradayVolumeChart from '../components/Charts/IntradayVolumeChart';
 import EODPriceTSChart from '../components/Charts/EODPriceTSChart';
 import IntradayPriceTSChart from '../components/Charts/IntradayPriceTSChart';
+import ChartSection from '../components/Charts/ChartSection';
 
 function HomePage() {
 
@@ -32,23 +33,13 @@ function HomePage() {
 
   return (
     <div class="Main">
-      <BackToTopButton />
-      <Navbar />
+
       <Overview />
+      {/* <hr></hr>
+      <ChartSection/>
       <hr></hr>
-      <hr></hr>
-      {/* <Events></Events> */}
-      {/* <hr></hr> */}
-      <News />
-      <EODPriceChart />
-      <EODPriceTSChart />
-      <IntradayPriceChart/>
-      <IntradayPriceTSChart/>
-      <EODVWAPChart />
-      <IntradayVWAPChart/>
-      <EODVolumeChart />
-      <IntradayVolumeChart/>
-      <MktCapChart />
+      <News /> */}
+
       
 
     </div>

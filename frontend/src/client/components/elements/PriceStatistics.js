@@ -8,6 +8,8 @@ function PriceStatistics(){
                 <Statistic></Statistic>
                 <Statistic></Statistic>
                 <Statistic></Statistic>
+                <Statistic></Statistic>
+                <Statistic></Statistic>
             </div>
         </div>
     );

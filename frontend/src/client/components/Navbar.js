@@ -11,7 +11,7 @@ function NavScrollExample() {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#brand"><img id="brand" src="logo.png" width="50" height="50" alt=""></img></Navbar.Brand>
+        <Navbar.Brand href="/"><img id="brand" src="https://i.postimg.cc/kgSsGmCB/logo.png" width="50" height="50" alt=""></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -19,11 +19,11 @@ function NavScrollExample() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1" id="opt-1" className="nav-opt">Overview</Nav.Link>
-            <Nav.Link href="#action2" className="nav-opt">Charts</Nav.Link>
-            <Nav.Link href="#action3" className="nav-opt">Research</Nav.Link>
-            <Nav.Link href="#action4" className="nav-opt">Events</Nav.Link>
-            <Nav.Link href="#action5" className="nav-opt">News</Nav.Link>
+            <Nav.Link href="/Ethereum/overview" id="opt-1" className="nav-opt">Overview</Nav.Link>
+            <Nav.Link href="/Ethereum/charts" className="nav-opt">Charts</Nav.Link>
+            {/* <Nav.Link href="#action3" className="nav-opt">Research</Nav.Link> */}
+            <Nav.Link href="/Ethereum/events" className="nav-opt">Events</Nav.Link>
+            <Nav.Link href="/Ethereum/news" className="nav-opt">News</Nav.Link>
           </Nav>
           <SearchBox/>
         </Navbar.Collapse>

@@ -7,9 +7,6 @@
         .main{
             width: 100%;
             height: auto;
-            /* background-color: rgb(245, 245, 245); */
-            font-family: poppins;
-            padding: 50px 0;
             display: grid;
             place-items: center;
         }
@@ -31,24 +28,20 @@
             transform: translateX(-50%);
         }
 
-        /* container-class Css Start  */
+        /* Container Css Start  */
 
-        .container-class{
-            width: 70%;
-            height: auto;
-            position: relative;
-        }
-        .container-class ul::after{
+        
+        .container ul::after{
             position: absolute;
             content: '';
             width: 2px;
             height: 100%;
             background-image: linear-gradient(to right, #27c499, #25678f);
         }
-        .container-class ul{
+        .container ul{
             list-style: none;
         }
-        .container-class ul li{
+        .container ul li{
             width: 50%;
             height: auto;
             padding: 15px 20px;
@@ -59,23 +52,23 @@
             position: relative;
             z-index: 99;
         }
-        .container-class ul li:nth-child(odd){
+        .container ul li:nth-child(odd){
             float: left;
             clear: right;
             transform: translateX(-30px);
         }
-        .container-class ul li:nth-child(odd) .date{
+        .container ul li:nth-child(odd) .date{
             right: 20px;
         }
-        .container-class ul li:nth-child(even){
+        .container ul li:nth-child(even){
             float: right;
             clear: left;
             transform: translateX(30px);
         }
-        .container-class ul li:nth-child(4){
+        .container ul li:nth-child(4){
             margin-bottom: 0;
         }
-        .container-class ul li .title{
+        .container ul li .title{
             font-size: 20px;
             font-weight: 500;
             color: #25678f;
@@ -103,15 +96,15 @@
             place-items: center;
             font-size: 14px;
         }
-        .container-class ul li .circle{
+        .container ul li .circle{
             width: 30px;
             height: 30px;
             border-radius: 50%;
-            /* background-color: rgba(176, 174, 174, 0.96); */
+            background-color: rgba(176, 174, 174, 0.96);
             position: absolute;
             top: 0;
         }
-        .container-class ul li .circle::after{
+        .container ul li .circle::after{
             content: '';
             position: absolute;
             width: 15px;
@@ -122,11 +115,11 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
-        .container-class ul li:nth-child(odd) .circle{
+        .container ul li:nth-child(odd) .circle{
             right: -30px;
             transform: translate(50%, -50%);
         }
-        .container-class ul li:nth-child(even) .circle{
+        .container ul li:nth-child(even) .circle{
             left: -30px;
             transform: translate(-50%, -50%);
         }
@@ -134,37 +127,37 @@
         /*  Media Query Started  */
 
         @media screen and (max-width:1224px){
-            .container-class{
+            .container{
                 width: 85%;
             }
         }
 
         @media screen and (max-width:993px){
-            .container-class{
+            .container{
                 width: 80%;
                 transform: translateX(15px);
             }
-            .container-class ul::after{
+            .container ul::after{
                 left: -30px;
             }
-            .container-class ul li{
+            .container ul li{
                 width: 100%;
                 float: none;
                 clear: none;
                 margin-bottom: 80px;
             }
-            .container-class ul li:nth-child(odd){
+            .container ul li:nth-child(odd){
                 text-align: left;
                 transform: translateX(0);
             }
-            .container-class ul li:nth-child(odd) .date{
+            .container ul li:nth-child(odd) .date{
                 left: 20px;
             }
-            .container-class ul li:nth-child(odd) .circle{
+            .container ul li:nth-child(odd) .circle{
                 left: -30px;
                 transform: translate(-50%, -50%);
             }
-            .container-class ul li:nth-child(even){
+            .container ul li:nth-child(even){
                 transform: translateX(0);
             }
         }

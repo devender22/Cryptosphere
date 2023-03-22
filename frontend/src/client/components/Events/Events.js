@@ -1,16 +1,19 @@
-
 import React from "react";
 import "./styles.css";
-
+import Navbar from "../Navbar"
+import BackToTopButton from "../BackToTopButton";
 function Events() {
+  const cstyle={
+    "width": "70%",
+    "height": "auto",
+    "position": "relative"
+}
   return (
-    <div id="action4"> 
-    <div className="main-class">
-    <h3 className="section-heading" style={{ width: "6%" }}>
-        Events
-      </h3>
-      <div className="tile-group">
-      <div className="container-class">
+    <div id="action4" className="Main">
+      <Navbar/> 
+    <div className="main">
+    <h3 className="section-heading" style={{"marginBottom":"110px","width": "7%" }}>Events</h3>
+      <div className="container" style={cstyle}>
         <ul>
           <li>
             <div className="circle"></div>
@@ -150,9 +153,8 @@ function Events() {
 
         </ul>
       </div>
-      </div>
-      
     </div>
+    <BackToTopButton/>
     </div>
   );
 }

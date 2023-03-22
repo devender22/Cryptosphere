@@ -1,6 +1,8 @@
 import { React,useEffect,useState } from "react";
 import Tile from "./Tile";
 import axios from "axios";
+import Navbar from "../Navbar";
+import BackToTopButton from "../BackToTopButton";
 
 function News() {
 
@@ -25,7 +27,8 @@ function News() {
   useEffect(getNews,[]);
 
   return (
-    <div id="action5">
+    <div id="action5" className="Main">
+      <Navbar></Navbar>
       <h3 className="section-heading" style={{ width: "6%" }}>
         News
       </h3>
@@ -37,6 +40,7 @@ function News() {
         }
 
       </div>
+      <BackToTopButton></BackToTopButton>
     </div>
   );
 }
