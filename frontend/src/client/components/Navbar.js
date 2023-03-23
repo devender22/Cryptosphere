@@ -9,7 +9,7 @@ import SearchBox from './SearchBox';
 
 function NavScrollExample() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" className="Navbar">
       <Container fluid>
         <Navbar.Brand href="/"><img id="brand" src="https://i.postimg.cc/kgSsGmCB/logo.png" width="50" height="50" alt=""></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />

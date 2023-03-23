@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col";
 
 export default function Tile(props) {
   return (
-    <div className="overview-box" style={{ height: "200px" }}>
+    <div className="overview-box" style={{ height: "220px" }}>
       <Row style={{ padding: "20px" }}>
         <Col sm={2}>
           <div class="fill">

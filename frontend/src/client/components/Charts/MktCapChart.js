@@ -131,11 +131,9 @@ function MktCapChart() {
             {chartData.length > 0 ?
                 <MktCapChartPlot data={chartData} /> : 
                 <><div className="Spinner">    
-                    <Button variant="secondary">
-                        <Spinner animation="border" role="status" >
-                            <span className="visually-hidden">Loading...</span>
-                        </Spinner>
-                    </Button>
+                    <Spinner animation="border" role="status" style={{"color":"#27c499"}} >
+                <span className="visually-hidden">Loading...</span>
+            </Spinner>
                 </div></>
             }
         </>
