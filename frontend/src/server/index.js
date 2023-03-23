@@ -1,5 +1,4 @@
 //building a slim server
-//refer: https://blog.logrocket.com/build-rest-api-node-express-mysql/
 
 const express = require('express');
 const app = express();
