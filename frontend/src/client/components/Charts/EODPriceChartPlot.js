@@ -30,6 +30,7 @@ class EODChartPlot extends React.Component {
                 series: chartOptions.series
             },
             chartOptions: {
+                
                 yAxis: [{
                     height: '75%',
                     labels: {
@@ -44,7 +45,7 @@ class EODChartPlot extends React.Component {
                 series: [{
                     data: this.props.data,
                     type: this.props.chartType,
-                   
+                    
                     type: 'candlestick',//toggle between candlestick and line
                     name: 'Price',
                     id: 'price'
@@ -91,7 +92,7 @@ class EODChartPlot extends React.Component {
         return <div>
             <Row>
                 <Col xs={12}>
-                    <div className="overview-box" style={{ height: "300px" }}>
+                    <div className="overview-box" style={{ height: "500px" }}>
                     <div className="box-heading">Historical Price Chart - Candlestick</div>
                         
                         <Row>

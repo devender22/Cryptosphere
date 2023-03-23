@@ -91,7 +91,7 @@ class EODPriceTSChartPlot extends React.Component {
         return <div>
             <Row>
                 <Col xs={12}>
-                    <div className="overview-box" style={{ height: "300px" }}>
+                    <div className="overview-box" style={{ height: "500px" }}>
                     <div className="box-heading">Historical Price Chart - Time series</div>
                         
                         <Row>

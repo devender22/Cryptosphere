@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Highcharts from 'highcharts';
 import IntradayPriceTSChartPlot from "./IntradayPriceTSChartPlot";
+import Spinner from 'react-bootstrap/Spinner'
+import { Button } from 'react-bootstrap';
 
 require('highcharts/indicators/indicators')(Highcharts)
 require('highcharts/indicators/pivot-points')(Highcharts)
@@ -127,7 +129,13 @@ function IntradayPriceTSChart() {
         <>
             { }
             {chartData.length > 0 ?
-                <IntradayPriceTSChartPlot data={chartData} /> : <>LOADING...</>
+                <IntradayPriceTSChartPlot data={chartData} /> : <><div className="Spinner">    
+                <Button variant="secondary">
+                    <Spinner animation="border" role="status" >
+                        <span className="visually-hidden">Loading...</span>
+                    </Spinner>
+                </Button>
+            </div></>
             }
         </>
     );
