@@ -3,7 +3,7 @@ import Tile from "./Tile";
 import axios from "axios";
 import Navbar from "../Navbar";
 import BackToTopButton from "../BackToTopButton";
-
+import Footer from "../Footer";
 function News() {
 
     const [resdata,setResdata]=useState([]);
@@ -40,6 +40,7 @@ function News() {
         }
 
       </div>
+      <Footer></Footer>
       <BackToTopButton></BackToTopButton>
     </div>
   );

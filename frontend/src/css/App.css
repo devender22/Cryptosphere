@@ -284,6 +284,47 @@ th {
   text-align: center;
 }
 
-.toggle{
+/* .toggle{
   font-size: 10px !important;
+} */
+
+
+
+.webName{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
 }
+
+.webLine{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  padding-right: 200px !important;
+  text-align: left !important;
+  padding-left: 50px !important;
+}
+
+.brandName{
+  font-weight: 600;
+  color: #25678f;
+}
+
+.footer{
+  /* margin-top:5px; */
+  text-align: center !important;
+  font-size: 15px !important;
+  font-weight: 300 !important;
+  color: #25678f;
+}
+
+.social{
+  margin-top:20px;
+}
+
+.social-btn:disabled{
+  color:#6c6a6a!important;
+}
+

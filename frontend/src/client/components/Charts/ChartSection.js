@@ -12,6 +12,8 @@ import EODPriceTSChart from './EODPriceTSChart';
 import IntradayPriceTSChart from './IntradayPriceTSChart';
 import BackToTopButton from "../BackToTopButton";
 import Navbar from "../Navbar";
+import Footer from '../Footer';
+
 function ChartSection() {
 
   return (
@@ -31,6 +33,7 @@ function ChartSection() {
       <IntradayVolumeChart/>
       <MktCapChart />
       </div>
+      <Footer></Footer>
       <BackToTopButton></BackToTopButton>
     </div>
   );

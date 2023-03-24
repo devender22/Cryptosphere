@@ -2,6 +2,8 @@ import React from "react";
 import "./styles.css";
 import Navbar from "../Navbar"
 import BackToTopButton from "../BackToTopButton";
+import Footer from "../Footer";
+
 function Events() {
   const cstyle={
     "width": "70%",
@@ -154,6 +156,7 @@ function Events() {
         </ul>
       </div>
     </div>
+    <Footer></Footer>
     <BackToTopButton/>
     </div>
   );

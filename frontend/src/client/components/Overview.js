@@ -9,7 +9,7 @@ import ROI from './elements/ROI';
 import GraphOverview from './elements/GraphOverview';
 import BackToTopButton from './BackToTopButton';
 import Navbar from './Navbar';
-// import Footer from './Footer/Footer';
+import Footer from './Footer';
 function Overview(){
     return(
         <div id="action1" className="Main">
@@ -32,7 +32,7 @@ function Overview(){
                     </Stack> */}
                 </Row>
             </Container>
-            {/* <Footer></Footer> */}
+            <Footer></Footer>
             <BackToTopButton/>
         </div>
     );
