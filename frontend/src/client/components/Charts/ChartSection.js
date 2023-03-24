@@ -16,7 +16,7 @@ function ChartSection() {
 
   return (
     <div id="action2" className="Main">
-      <Navbar/>
+      <Navbar c={2}/>
       <h3 className="section-heading" style={{ width: "6%" }}>
         Charts
       </h3>

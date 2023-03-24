@@ -28,7 +28,7 @@ function News() {
 
   return (
     <div id="action5" className="Main">
-      <Navbar></Navbar>
+      <Navbar c={4}></Navbar>
       <h3 className="section-heading" style={{ width: "6%" }}>
         News
       </h3>

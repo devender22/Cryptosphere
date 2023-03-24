@@ -93,8 +93,11 @@ class EODChartPlot extends React.Component {
             <Row>
                 <Col xs={12}>
                     <div className="overview-box" style={{ height: "500px" }}>
-                    <div className="box-heading">Historical Price Candlestick Chart</div>
-                        
+                    <div className="box-heading">Historical Price 
+                    <button className="btn-badge">
+                    Candlestick Chart
+        </button></div>
+                    
                         <Row>
                             <Col s={12}>
                                 <StockChart options={this.state.chartOptions} highcharts={Highcharts} />    

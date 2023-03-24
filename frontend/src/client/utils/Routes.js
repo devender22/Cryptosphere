@@ -1,6 +1,6 @@
 const Routes = {
     home: '/',
-    searchResults: (query) => `/search/${query}`,
+    searchResults: (query) => `/${query}`,
   };
   
   export default Routes;

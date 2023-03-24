@@ -92,7 +92,9 @@ class MktCapChartPlot extends React.Component {
             <Row>
                 <Col xs={12}>
                     <div className="overview-box" style={{ height: "500px" }}>
-                    <div className="box-heading">Market Cap Chart</div>
+                    <div className="box-heading">Market Cap<button className="btn-badge">
+                    Line Chart
+        </button></div>
                         
                         <Row>
                             <Col s={12}>

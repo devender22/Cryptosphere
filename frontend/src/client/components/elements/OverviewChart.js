@@ -22,9 +22,10 @@ const chartOptions = {
 }
 
 class OverviewChart extends React.Component {
-    constructor(props) {
-        super(props)
 
+    constructor(props) {
+       
+        super(props)
         this.state = {
             options: {
                 series: chartOptions.series
@@ -45,7 +46,7 @@ class OverviewChart extends React.Component {
                     data: this.props.data,
                     type: this.props.chartType,
                    
-                    type: 'line',//toggle between candlestick and line
+                    type: 'area',//toggle between candlestick and line
                     name: 'Time Series',
                     name: 'Price',
                     id: 'price'
@@ -67,8 +68,8 @@ class OverviewChart extends React.Component {
         }
         this.onClick = this.onClick.bind(this)
 
-        console.log("props", this.props)
-        console.log("props", this.props.chartType)
+        // console.log("props", this.props)
+        // console.log("props", this.props.chartType)
 
     }
 

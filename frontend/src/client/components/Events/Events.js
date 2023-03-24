@@ -10,7 +10,7 @@ function Events() {
 }
   return (
     <div id="action4" className="Main">
-      <Navbar/> 
+      <Navbar c={3}/> 
     <div className="main">
     <h3 className="section-heading" style={{"marginBottom":"110px","width": "7%" }}>Events</h3>
       <div className="container" style={cstyle}>

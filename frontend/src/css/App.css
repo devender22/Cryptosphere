@@ -283,3 +283,7 @@ th {
 .table td{
   text-align: center;
 }
+
+.toggle{
+  font-size: 10px !important;
+}

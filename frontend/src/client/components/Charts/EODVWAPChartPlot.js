@@ -92,7 +92,9 @@ class EODVWAPChartPlot extends React.Component {
             <Row>
                 <Col xs={12}>
                     <div className="overview-box" style={{ height: "500px" }}>
-                    <div className="box-heading">Historical VWAP Chart</div>
+                    <div className="box-heading">Historical VWAP<button className="btn-badge">
+                    Line Chart
+        </button></div>
                         
                         <Row>
                             <Col s={12}>

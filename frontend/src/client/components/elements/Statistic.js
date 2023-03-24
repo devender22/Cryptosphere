@@ -7,7 +7,7 @@ export default function Statistic(props){
     let valueStyle={"textAlign":"left","fontSize":"17px","color":"#000","fontWeight":"400","padding":"0 50px"};
     return(
         <div>
-        <Row style={{"marginTop":"30px"}}>
+        <Row style={{"marginTop":"25px"}}>
             <Col sm={6} style={headingStyle}>{props.heading}</Col>
             <Col sm={6} style={valueStyle}>{props.val}</Col>
         </Row>

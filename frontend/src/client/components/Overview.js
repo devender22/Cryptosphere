@@ -13,7 +13,7 @@ import Navbar from './Navbar';
 function Overview(){
     return(
         <div id="action1" className="Main">
-            <Navbar/>
+            <Navbar c={1}/>
             <Container>
             <h3 className="section-heading" style={{"marginBottom":"60px"}}>Overview</h3>
                 <Row>

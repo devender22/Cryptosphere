@@ -92,7 +92,9 @@ class IntradayPriceTSChartPlot extends React.Component {
             <Row>
                 <Col xs={12}>
                     <div className="overview-box" style={{ height: "500px" }}>
-                    <div className="box-heading">Intraday Price Line Chart</div>
+                    <div className="box-heading">Intraday Price <button className="btn-badge">
+                    Line Chart
+        </button></div>
                         
                         <Row>
                             <Col s={12}>

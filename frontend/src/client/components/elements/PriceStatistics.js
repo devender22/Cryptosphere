@@ -48,7 +48,7 @@ function PriceStatistics(){
                 <Statistic heading="Market CAP" val={mCAP.toFixed(3)}></Statistic>
                 <Statistic heading="Volume WAP" val={VWAP.toFixed(5)}></Statistic>
                 <Statistic heading="Volume" val={volume.toFixed(5)}></Statistic>
-                
+                <Statistic heading="NVT Ratio" val={(mCAP/volume).toFixed(5)}></Statistic>
             </div>
         </div>
     );
