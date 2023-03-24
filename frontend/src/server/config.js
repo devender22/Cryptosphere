@@ -9,7 +9,7 @@ const config =
         password: 'Desisproject@1',
         database: 'cryptodb',
         port: 3306,
-        ssl: { ca: fs.readFileSync("C:/Users/parid/Downloads/DigiCertGlobalRootCA.crt.pem") }
+        ssl: { ca: fs.readFileSync("DigiCertGlobalRootCA.crt.pem") }
     },
   
 };
