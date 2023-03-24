@@ -4,7 +4,7 @@ const config = require('../config');
 
 async function getMultiple() {
     const rows = await db.query(
-        `SELECT Date, Gold, SPX_Index
+        `SELECT Date, Gold, SPX_Index, BTC
     FROM other_securities`
     );
 

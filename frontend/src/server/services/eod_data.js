@@ -4,7 +4,7 @@ const config = require('../config');
 
 async function getMultiple() {
   const rows = await db.query(
-    `SELECT Date, Coin, Open, Close, High, Low, Volume 
+    `SELECT Date, Coin, Open, Close, High, Low, Volume,VWAP, MktCap
     FROM eod_data`
   );
 

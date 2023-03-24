@@ -1,5 +1,4 @@
 //building a slim server
-//refer: https://blog.logrocket.com/build-rest-api-node-express-mysql/
 
 const express = require('express');
 const app = express();
@@ -8,6 +7,8 @@ const eod_data_Router = require("./routes/eod_data");
 const intraday_prices_Router = require("./routes/intraday_prices");
 const other_securities_Router = require("./routes/other_securities");
 
+var cors = require('cors');
+app.use(cors());
 app.use(express.json());
 app.use(
     express.urlencoded({
@@ -18,6 +19,11 @@ app.use(
 app.get("/", (req, res) => {
     res.json({ message: "ok" });
 });
+
+app.post("/post", (req, res) => {
+    console.log("Connected to React");
+    res.redirect("/");
+  });
 
 app.use("/eod-data", eod_data_Router);
 app.use("/intraday-prices", intraday_prices_Router);
