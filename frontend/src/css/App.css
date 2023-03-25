@@ -313,7 +313,7 @@ th {
 }
 
 .footer{
-  /* margin-top:5px; */
+  margin-top:50px !important;
   text-align: center !important;
   font-size: 15px !important;
   font-weight: 300 !important;

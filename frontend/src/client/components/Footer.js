@@ -30,7 +30,7 @@ function Footer() {
           ></div>
         </Col>
       </Row>
-      <MDBFooter className="text-center text-white social">
+      {/* <MDBFooter className="text-center text-white social">
         <MDBContainer className="pt-4">
           <section className="mb-4">
             <MDBBtn
@@ -99,8 +99,8 @@ function Footer() {
             </MDBBtn>
           </section>
         </MDBContainer>
-      </MDBFooter>
-      <footer className="footer">{`Copyright © CryptoSphere 2023`}</footer>
+      </MDBFooter> */}
+      <footer className="footer">{`Copyright © Cryptosphere 2023`}</footer>
     </div>
   );
 }

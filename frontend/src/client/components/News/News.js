@@ -13,11 +13,22 @@ function News() {
       .get(url)
       .then((response) => {
         var articles=response.data.articles;
-        console.log(articles);
-        setResdata(resdata.concat(articles).slice(0,5));
-        console.log("News");
-        // console.log(resdata.length);
-        console.log(resdata[0]);
+        // console.log(articles);
+        let arr=[];
+        const newsSet = new Set();
+
+        let idx=0;
+        let count=0;
+
+        while(count<5){
+          if(!newsSet.has(articles[idx].title)){
+            newsSet.add(articles[idx].title);
+            arr.push(articles[idx]);
+            count++;
+          }
+          idx++;
+        }
+        setResdata(resdata.concat(arr));
       })
       .catch((error) => {
         console.log(error);

@@ -63,7 +63,8 @@ class OverviewChart extends React.Component {
                         }
                     }
                 }
-                ]
+                ],
+                exporting:{ enabled: false }
             }
         }
         this.onClick = this.onClick.bind(this)

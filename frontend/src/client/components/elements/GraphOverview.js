@@ -111,7 +111,8 @@ function GraphOverview() {
                         zIndex: 1,
 
                     }
-                ]
+                ],
+                exporting:{ enabled: false }
             });
 
 

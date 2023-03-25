@@ -43,12 +43,12 @@ function PriceStatistics(){
         <div className="overview-box" style={{"height":"470px"}}>
             <div className="box-heading">ETH Price Statistics (in USD)</div>
             <div style={{"padding":"20px"}}>
-                <Statistic heading="Intraday Price" val={intprice.toFixed(5)}></Statistic>
-                <Statistic heading="Daily Price" val={dailyprice.toFixed(5)}></Statistic>
-                <Statistic heading="Market CAP" val={mCAP.toFixed(3)}></Statistic>
-                <Statistic heading="Volume WAP" val={VWAP.toFixed(5)}></Statistic>
-                <Statistic heading="Volume" val={volume.toFixed(5)}></Statistic>
-                <Statistic heading="NVT Ratio" val={(mCAP/volume).toFixed(5)}></Statistic>
+                <Statistic heading="Current Price" val={intprice!==0?intprice.toFixed(5):"Loading..."}></Statistic>
+                <Statistic heading="Previous Day  Price" val={dailyprice!==0?dailyprice.toFixed(5):"Loading..."}></Statistic>
+                <Statistic heading="Market CAP" val={mCAP!==0?mCAP.toFixed(3):"Loading..."}></Statistic>
+                <Statistic heading="VWAP" val={VWAP!==0?VWAP.toFixed(5):"Loading..."}></Statistic>
+                <Statistic heading="Volume" val={volume!==0?volume.toFixed(5):"Loading..."}></Statistic>
+                <Statistic heading="NVT Ratio" val={mCAP!==0?(mCAP/volume).toFixed(5):"Loading..."}></Statistic>
             </div>
         </div>
     );
