@@ -10,6 +10,7 @@ require('highcharts/indicators/pivot-points')(Highcharts)
 require('highcharts/indicators/macd')(Highcharts)
 require('highcharts/modules/exporting')(Highcharts)
 require('highcharts/modules/map')(Highcharts)
+require("highcharts/modules/export-data")(Highcharts);
 
 const chartOptions = {
     title: {
@@ -46,7 +47,7 @@ class IntradayVWAPChartPlot extends React.Component {
                     type: this.props.chartType,
                    
                     type: 'area',
-                    name: 'VWAP Price',
+                    name: 'VWAP',
                     id: 'price'
                 }, {
                     type: 'pivotpoints',

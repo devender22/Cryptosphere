@@ -10,6 +10,7 @@ require('highcharts/indicators/pivot-points')(Highcharts)
 require('highcharts/indicators/macd')(Highcharts)
 require('highcharts/modules/exporting')(Highcharts)
 require('highcharts/modules/map')(Highcharts)
+require("highcharts/modules/export-data")(Highcharts);
 
 const chartOptions = {
     title: {
