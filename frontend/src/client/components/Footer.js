@@ -22,7 +22,7 @@ function Footer() {
           ></img>
         </Col>
         <Col md={1} style={{ textAlign: "left" }} className="webName">
-          <h5 className="brandName">CryptoSphere</h5>
+          <h5 className="brandName">Cryptosphere</h5>
         </Col>
         <Col md={9} className="webLine">
           <div

@@ -34,7 +34,6 @@ function ROI() {
       .get(url)
       .then((response) => {
         let obj = response.data["data"];
-        console.log(obj.length)
         let count = 1;
         let idx = obj.length - 1;
         while (count > 0) {
@@ -179,12 +178,12 @@ function ROI() {
         while (count > 0 && idx > 0) {
           if (obj[idx]["Gold"] !== null) {
             setGold({ ...gold, M6: obj[idx]["Gold"] });
+
             count--;
           }
 
           idx--;
         }
-        // console.log(obj[idx]);
         //--------------
         count = 180;
         idx = obj.length - 1;
@@ -196,7 +195,7 @@ function ROI() {
 
           idx--;
         }
-        // console.log(obj[idx]);
+
         //-------------
         count = 180;
         idx = obj.length - 1;
@@ -205,13 +204,9 @@ function ROI() {
             setBTC({ ...btc, M6: obj[idx]["BTC"] });
             count--;
           }
-
           idx--;
         }
-        // console.log(obj[idx]);
-        // console.log(btc);
-        // console.log(gold);
-        // console.log(btc);
+
         //-------
         // count = 360;
         // idx = obj.length - 1;
@@ -400,8 +395,8 @@ function ROI() {
                 <td>
                   {(((gold["Y1"] - goldTDay) * 100) / gold["Y1"]).toFixed(3)}
                 </td>
-              </tr>
-              <tr>
+              </tr> */}
+              {/* <tr>
                 <th>3 Y</th>
                 <td>{(((btc['Y3'] - btcTDay) * 100) / btc['Y3']).toFixed(3)}</td>
                 <td>{(((spx['Y3'] - spxTDay) * 100) / spx['Y3']).toFixed(3)}</td>
