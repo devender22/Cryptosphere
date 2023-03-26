@@ -27,13 +27,16 @@ def update(start_date):
     idx_2 = 0
     idx_3 = 0
     while (idx_3 < len(btc_data['data'])):
+        # Insert available data into other_securities
         date = btc_data['data'][idx_3]['time'][0: 10]
-        if date != gold_data['values'][idx_1]['datetime']:
+        if (not ('values' in gold_data.keys()) or
+                date != gold_data['values'][idx_1]['datetime']):
             sql = ("INSERT INTO other_securities (Date, BTC)"
                    "VALUES (%s,%s);")
             val = (date, btc_data['data'][idx_3]['price_close'])
             idx_3 += 1
-        elif date != spx_index_data['values'][idx_2]['datetime']:
+        elif (not ('values' in spx_index_data.keys()) or
+                date != spx_index_data['values'][idx_2]['datetime']):
             sql = ("INSERT INTO other_securities (Date, Gold, BTC)"
                    "VALUES (%s,%s,%s);")
             val = (date,
