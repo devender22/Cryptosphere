@@ -4,12 +4,16 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Highcharts from 'highcharts/highstock'
 import StockChart from './StockChart'
+import enableExporting from 'highcharts/modules/exporting';
+import { chart } from 'highcharts';
 
 require('highcharts/indicators/indicators')(Highcharts)
 require('highcharts/indicators/pivot-points')(Highcharts)
 require('highcharts/indicators/macd')(Highcharts)
 require('highcharts/modules/exporting')(Highcharts)
 require('highcharts/modules/map')(Highcharts)
+require("highcharts/modules/export-data")(Highcharts);
+
 
 const chartOptions = {
     title: {
@@ -61,7 +65,13 @@ class EODPriceTSChartPlot extends React.Component {
                         }
                     }
                 }
-                ]
+                ],
+                exporting: {
+                    csv: {
+                        itemDelimiter: ';'
+                      }   
+                }
+
             }
         }
         this.onClick = this.onClick.bind(this)
